@@ -1,0 +1,40 @@
+{
+	"name": "jquery-boilerplate",
+	"version": "0.2.0",
+	"description": "A TypeScript plugin boilerplate",
+	"main": "dist/boilerplate.min.js",
+	"module": "src/index.ts",
+	"typings": "src/index.d.ts",
+	"repository": "https://github.com/vi-plugins/jquery-boilerplate.git",
+	"author": "Jan Rembold <janrembold@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build": "npm run clean && webpack",
+		"build:watch": "npm run clean && webpack --watch",
+		"pretest": "npm run build",
+		"test": "npm run --silent test:unit",
+		"test:unit": "tsc --module commonjs ./test/unit/*.ts && mocha ./test/unit/*.js"
+	},
+	"devDependencies": {
+		"@types/chai": "4.1.2",
+		"@types/jquery": "3.3.0",
+		"@types/mocha": "2.2.47",
+		"@types/webpack": "^3.8.4",
+		"@types/webpack-env": "^1.13.5",
+		"chai": "4.1.2",
+		"css-loader": "0.28.9",
+		"extract-text-webpack-plugin": "3.0.2",
+		"mocha": "5.0.0",
+		"node-sass": "4.7.2",
+		"rimraf": "2.6.2",
+		"sass-loader": "6.0.6",
+		"source-map-loader": "0.2.3",
+		"ts-loader": "3.4.0",
+		"typescript": "2.6.2",
+		"uglify-js": "3.3.9",
+		"webpack": "3.10.0",
+		"webpack-node-externals": "1.6.0"
+	},
+	"dependencies": {}
+}
